@@ -1,0 +1,167 @@
+/* Outer container */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  min-height: 100vh;
+  background-color: #F3F4F6;
+}
+
+/* Card container for the form */
+.formContainer {
+  width: 90%;
+  max-width: 800px;
+  background-color: white;
+  padding: 25px;
+  border-radius: 16px;
+  border-left: 5px solid #818CF8;
+  box-shadow: 
+      0 4px 6px -1px rgba(0, 0, 0, 0.1),
+      0 2px 4px -2px rgba(0, 0, 0, 0.1);
+}
+
+/* Title styling */
+.title {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #1F2937;
+  font-weight: 600;
+  text-align: left;
+}
+
+/* Form styling */
+.form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  background-color: white;
+  color: #1F2937;
+}
+
+/* Full-width inputs */
+.formGroupFull {
+  grid-column: span 2;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Input styling */
+.formGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #1F2937;
+}
+
+input,
+textarea {
+  padding: 14px 16px;
+  border: 1px solid #E5E7EB;
+  border-radius: 8px;
+  background-color: white;
+  color: #4B5563;
+  font-size: 14px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #818CF8;
+  box-shadow: 0 4px 6px rgba(129, 140, 248, 0.1);
+}
+
+/* Button group styling */
+.buttonGroup {
+  grid-column: span 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  gap: 0.75rem;
+}
+
+.backButton {
+  padding: 8px 16px;
+  border: 2px solid #818CF8;
+  border-radius: 8px;
+  background: none;
+  font-size: 14px;
+  font-weight: 500;
+  color: #818CF8;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.backButton:hover {
+  background-color: #EEF2FF;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(129, 140, 248, 0.3);
+}
+
+.nextButton {
+  padding: 8px 16px;
+  background-color: #818CF8;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.nextButton:hover {
+  background-color: #6B7ED9;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(129, 140, 248, 0.3);
+}
+
+/* Error state */
+.error {
+  color: #DC2626;
+  padding: 1rem;
+  margin: 1rem 0;
+  background-color: #FEE2E2;
+  border: 1px solid #FECACA;
+  border-radius: 8px;
+}
+
+/* Loading state */
+.loading {
+  text-align: center;
+  padding: 2rem;
+  color: #6B7280;
+  font-size: 0.95rem;
+}
+
+/* Add responsive styles */
+@media (max-width: 768px) {
+  .formContainer {
+      width: 95%;
+      padding: 15px;
+  }
+  
+  .form {
+      grid-template-columns: 1fr;
+  }
+  
+  .formGroupFull {
+      grid-column: span 1;
+  }
+  
+  .buttonGroup {
+      flex-direction: column;
+  }
+  
+  .backButton,
+  .nextButton {
+      width: 100%;
+  }
+}
