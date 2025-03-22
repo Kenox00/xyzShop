@@ -1,0 +1,2 @@
+# xyzShop
+Invetory management
